@@ -9,7 +9,7 @@ import { QuestionAnswer } from "../../../interfaces/question";
 
 export default function AfterAdmission() {
   return (
-    <div className="flex-col justify-center items-center min-h-screen min-w-full bg-zinc-950 p-10">
+    <div className="flex-col justify-center items-center min-h-screen min-w-full bg-gradient-to-br from-[#8a1503] via-[#061f40] via-45% to-[#104a95] p-10 font-sans">
       <div dir="rtl">
         <h2
           className="text-3xl md:text-5xl flex items-center max-sm:justify-center gap-3 font-extrabold
@@ -17,7 +17,7 @@ export default function AfterAdmission() {
           data-aos="fade-up"
         >
           أسئلة ما
-          <span className="bg-gradient-to-b from-[#bfa260]/60 to-[#CFAA54] text-transparent bg-clip-text">
+          <span className="bg-gradient-to-b from-[#bfa260]/60 to-[#CFAA54] text-transparent bg-clip-text font-black">
             بعد
           </span>
           القبول في الجامعة
@@ -26,7 +26,7 @@ export default function AfterAdmission() {
         <Accordion type="single" collapsible className="w-full AccordionRoot">
           {QAAfter.map(({ question, answer, value }: QuestionAnswer) => (
             <AccordionItem
-              className="hover:bg-[#f1f1f1] dark:hover:bg-[#262525]"
+              className="hover:bg-[#f1f1f1] dark:hover:bg-[#262525] "
               key={value}
               value={value}
               data-aos="fade-up"
@@ -35,7 +35,7 @@ export default function AfterAdmission() {
                 {question}
               </AccordionTrigger>
 
-              <AccordionContent className="md:text-lg text-sm text-muted-foreground">
+              <AccordionContent className="md:text-lg text-sm text-muted-foreground font-bold text-gray-200">
                 {answer}
               </AccordionContent>
             </AccordionItem>

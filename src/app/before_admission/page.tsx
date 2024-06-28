@@ -9,7 +9,7 @@ import { QABefore } from "../../../data/before";
 
 export default function BeforeAdmission() {
   return (
-    <div className="flex-col justify-center items-center min-h-screen min-w-full bg-zinc-950 p-10">
+    <div className="flex-col justify-center items-center min-h-screen min-w-full bg-gradient-to-br from-[#8a1503] via-[#061f40] via-45% to-[#104a95] p-10 font-sans">
       <div dir="rtl">
         <h2
           className="text-3xl md:text-5xl flex items-center max-sm:justify-center gap-3 font-extrabold
@@ -17,7 +17,7 @@ export default function BeforeAdmission() {
           data-aos="fade-up"
         >
           أسئلة ما
-          <span className="bg-gradient-to-b from-[#bfa260]/60 to-[#CFAA54] text-transparent bg-clip-text">
+          <span className="bg-gradient-to-b from-[#bfa260]/60 to-[#CFAA54] text-transparent bg-clip-text font-black">
             قبل
           </span>
           القبول في الجامعة

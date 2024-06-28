@@ -1,4 +1,4 @@
-import { BellRing, Check } from "lucide-react";
+import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -21,7 +21,9 @@ export function CardBefore({ className, ...props }: CardProps) {
         <CardDescription>هنا أسئلة ما قبل القبول في الجامعة</CardDescription>
       </CardHeader>
       <CardFooter>
-        <Button className="w-full">انتقل</Button>
+        <Button asChild className="w-full">
+          <Link href="/before_admission">انتقل</Link>
+        </Button>{" "}
       </CardFooter>
     </Card>
   );

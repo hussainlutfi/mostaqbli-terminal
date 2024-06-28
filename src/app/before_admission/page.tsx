@@ -4,27 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-interface FAQProps {
-  question: string;
-  answer: string;
-  value: string;
-}
-
-const FAQList: FAQProps[] = [
-  {
-    question: 'هل لازم اسجل في "مُستثمر بلس" عشان اشوف الفرص؟',
-    answer:
-      "لا، ما يحتاج! تقدر تلقى نظرة على كل الفرص بدون تسجيل. بس ترى هاا، إذا بغيت تحفظ فرص معينة أو تضيف استثماراتك، يبغالك تسجل معنا.",
-    value: "faq-1",
-  },
-  {
-    question: "كيف أقدر أضيف استثماري على الموقع؟",
-    answer:
-      "موضوعك سهل! بس تسجل وتعبي تفاصيل استثمارك وخلاص انبسط، استثمارك صار متاح لكل الناس يشوفونه.",
-    value: "faq-2",
-  },
-];
+import { QuestionAnswer } from "../../../interfaces/question";
+import { QABefore } from "../../../data/before";
 
 export default function BeforeAdmission() {
   return (
@@ -35,14 +16,15 @@ export default function BeforeAdmission() {
                 md:leading-normal leading-loose tracking-tight mb-4"
           data-aos="fade-up"
         >
-          الأسئلة
+          أسئلة ما
           <span className="bg-gradient-to-b from-[#bfa260]/60 to-[#CFAA54] text-transparent bg-clip-text">
-            الشائعة
+            قبل
           </span>
+          القبول في الجامعة
         </h2>
 
         <Accordion type="single" collapsible className="w-full AccordionRoot">
-          {FAQList.map(({ question, answer, value }: FAQProps) => (
+          {QABefore.map(({ question, answer, value }: QuestionAnswer) => (
             <AccordionItem
               className="hover:bg-[#f1f1f1] dark:hover:bg-[#262525]"
               key={value}
